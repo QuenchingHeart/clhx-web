@@ -1,4 +1,4 @@
-# clhx-web
+# clhx-web [![Build Status](https://www.travis-ci.org/QuenchingHeart/clhx-web.svg?branch=master)](https://www.travis-ci.org/QuenchingHeart/clhx-web)
 
 ## Project setup
 
