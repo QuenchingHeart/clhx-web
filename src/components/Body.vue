@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="webBody">
     <el-carousel :interval="4000" type="card" indicator-position="outside">
       <el-carousel-item v-for="img in topImages" :key="img.src">
         <el-image :src="img.path"></el-image>
@@ -33,6 +33,9 @@
 </template>
 
 <style scoped>
+.webBody {
+  margin-top: 50px;
+}
 </style>
 
 <script>

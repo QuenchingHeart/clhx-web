@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <Header></Header>
-    <el-divider></el-divider>
     <Body></Body>
     <el-divider></el-divider>
     <Footer></Footer>
