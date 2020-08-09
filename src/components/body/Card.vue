@@ -8,7 +8,7 @@
       <div v-for="(content, idx) in cardContent" :key="idx" class="text item">
         <el-row v-if="idx < 11">
           <el-col :span="20">
-            <el-link type="primary"  style="float: left">{{ content.title }}</el-link>
+            <el-link type="primary" style="float: left">{{ content.title }}</el-link>
           </el-col>
           <el-col :span="4">
             2020-08-08
