@@ -1,40 +1,45 @@
 <template>
-    <div class="header">
-        <el-image :src="src" class="image"></el-image>
-        <div class="buttongroup">
-            <el-button type="text">无敌</el-button>
-            <el-button type="text">无敌</el-button>
-            <el-button type="text">无敌</el-button>
-            <el-button type="text">无敌</el-button>
-        </div>
-    </div>
+  <div>
+    <el-row :gutter="20">
+      <el-col :span="10">
+        <el-image :src="logo"></el-image>
+      </el-col>
+      <el-col :span="10">
+        <el-menu mode="horizontal">
+          <el-menu-item>首页</el-menu-item>
+          <el-menu-item>社区服务</el-menu-item>
+          <el-menu-item>志愿招募</el-menu-item>
+          <el-menu-item>合作交流</el-menu-item>
+          <el-menu-item>关于我们</el-menu-item>
+        </el-menu>
+      </el-col>
+    </el-row>
+  </div>
 </template>
 
 <style scoped>
 .header {
-    height: 50px
+  height: 50px;
 }
 
 .buttongroup {
-    float: right
+  float: right;
 }
 
 .image {
-    width:100px;
-    height:100px;
-    float: left;
-    margin-top: -50px;
+  width: 100px;
+  float: left;
+  margin-top: -50px;
 }
 </style>
 
 <script>
-
 export default {
-    name: "webHeader",
-    data() {
-      return {
-        src: 'https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg'
-      }
-    }
-}
+  name: "webHeader",
+  data() {
+    return {
+      logo: "logo.png",
+    };
+  },
+};
 </script>
