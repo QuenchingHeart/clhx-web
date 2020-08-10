@@ -1,16 +1,16 @@
 <template>
   <div>
     <el-row :gutter="20">
-        <el-menu mode="horizontal">
-          <el-menu-item>
-            <el-image :src="logo" class="image"></el-image>
-          </el-menu-item>
-          <el-menu-item>首页</el-menu-item>
-          <el-menu-item>社区服务</el-menu-item>
-          <el-menu-item>志愿招募</el-menu-item>
-          <el-menu-item>合作交流</el-menu-item>
-          <el-menu-item>关于我们</el-menu-item>
-        </el-menu>
+        <el-col :span="12">
+          <el-image :src="logo" class="image"></el-image>
+        </el-col>
+        <el-col :span="12">
+          <el-button type="text">首页</el-button>
+          <el-button type="text">社区服务</el-button>
+          <el-button type="text">志愿招募</el-button>
+          <el-button type="text">合作交流</el-button>
+          <el-button type="text">关于我们</el-button>
+        </el-col>
     </el-row>
   </div>
 </template>
@@ -23,18 +23,15 @@
 .image {
   max-width: 25rem;
   max-height: 10rem;
-  margin-top: -3.5rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-top: -2rem;
 }
 
-.el-menu {
-  width: 100%;
-  float: right;
-}
-
-.el-menu-item {
+.el-button {
   font-size: 18px;
+}
+
+.el-button+.el-button {
+  margin-left:20px;
 }
 </style>
 

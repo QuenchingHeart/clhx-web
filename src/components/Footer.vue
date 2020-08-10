@@ -10,16 +10,24 @@
       </p>
 
       <div style="text-align: center;">
-        <el-link
-          v-for="(icon, idx) in icons" :key="idx"
-          :href="icon.url"
-          :underline="false">
+
+        <el-popover
+          v-for="(icon,idx) in icons" :key="idx"
+          style="text-align: center;"
+          placement="top"
+          trigger="hover">
           <el-image
+            :src="icon.source"
+            fit="fit">
+          </el-image>
+          <el-image
+            slot="reference"
             style="width: 32px; height: 32px; margin: 10px"
             :src="icon.path"
             fit="fit">
           </el-image>
-        </el-link>
+        </el-popover>
+
       </div>
       
     </el-footer>
@@ -36,14 +44,12 @@ export default {
     return {
       icons: [
         {
-          path: "icon/wechat.svg"
+          path: "icon/wechat.svg",
+          source: "qrcode-official.jpg"
         },
         {
-          path: "icon/miniprogram.svg"
-        },
-        {
-          path: "icon/github.svg",
-          url: "https://github.com/QuenchingHeart"
+          path: "icon/miniprogram.svg",
+          source: "qrcode-miniprogram.jpg"
         }
       ]
     }
