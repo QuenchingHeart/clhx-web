@@ -1,8 +1,8 @@
 <template>
   <div class="webBody">
-    <el-carousel :interval="4000" type="card" indicator-position="outside" height="400px">
+    <el-carousel :interval="4000" type="card" indicator-position="outside" :height="height">
       <el-carousel-item v-for="img in topImages" :key="img.src">
-        <el-image :src="img.path" class="image"></el-image>
+        <el-image :src="img.path" class="image" fit="contain"></el-image>
       </el-carousel-item>
     </el-carousel>
 
@@ -20,7 +20,7 @@
         <Card cardName="通知" :cardContent="notifications" cardHeight="300px"></Card>
       </el-col>
       <el-col :offset="1" :span="10">
-        <el-carousel :interval="4000" indicator-position="outside">
+        <el-carousel :interval="4000" indicator-position="outside" :height="height">
           <el-carousel-item v-for="img in detailImages" :key="img.src">
             <el-image :src="img.path"></el-image>
           </el-carousel-item>
@@ -35,9 +35,6 @@
   margin-top: 50px;
 }
 
-.el-carousel__item {
-  height: 400px;
-}
 </style>
 
 <script>
@@ -50,6 +47,7 @@ export default {
   },
   data() {
     return {
+      height: "400px",
       activities: [
         {
           title: "高科技进社区，无人机航拍定位垃圾投放点",
@@ -243,5 +241,9 @@ export default {
       ],
     };
   },
+  mounted() {
+    let height = window.innerHeight
+    this.height = 0.5 * height + 'px'
+  }
 };
 </script>
